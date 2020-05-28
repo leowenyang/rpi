@@ -1,9 +1,10 @@
-#!/usr/bin/env python3
+#!/bin/python
+
 import bluetooth
 
-server_sock=bluetooth.BluetoothSocket( bluetooth.RFCOMM )
+server_sock=bluetooth.BluetoothSocket( bluetooth.L2CAP )
 
-port = 1
+port = 0x1001
 server_sock.bind(("",port))
 server_sock.listen(1)
 
